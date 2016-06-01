@@ -62,7 +62,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 app.use(function (req,res,next) {
   // res.locals它是模板渲染时真正用的数据源对象
-  res.locals.user = req.session.user ||{};
+  res.locals.user = req.session.user;
   res.locals.success = req.flash('success').toString();
   res.locals.error = req.flash('error').toString();
   next();

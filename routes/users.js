@@ -55,8 +55,9 @@ router.post('/login',ware.checkNotLogin,function (req,res) {
 });
 
 
-router.get('/logout',ware.checkNotLogin,function (req,res) {
-  res.send('logout');
+router.get('/logout',ware.checkLogin,function (req,res) {
+  req.session.user = null;
+  res.redirect('/users/login');
 });
 
 
