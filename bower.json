@@ -1,0 +1,21 @@
+{
+  "name": "jocyblog",
+  "description": "",
+  "main": "",
+  "authors": [
+    "jocyci <jessiejocy@foxmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jocyci/jocyblog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

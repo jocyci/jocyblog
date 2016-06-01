@@ -1,0 +1,51 @@
+<%include ../include/header.html%>
+<form action="/users/reg" class="col-xs-6 col-xs-offset-2" method="post">
+    <div class="form-group">
+        <label class="col-xs-3" for="username">用户名</label>
+        <div class="col-xs-9 input-group">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-user"></span>
+            </div>
+        <input type="text" class="form-control" name="username" id="username"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="col-xs-3">email</label>
+        <div class="col-xs-9 input-group">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-envelope"></span>
+            </div>
+            <input type="text" class="form-control" name="email" id="email"/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="password" class="col-xs-3">密码</label>
+        <div class="col-xs-9 input-group">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-lock"></span>
+            </div>
+            <input type="text" class="form-control" name="password" id="password"/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="repassword" class="col-xs-3">重复密码</label>
+        <div class="col-xs-9 input-group">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-lock"></span>
+            </div>
+            <input type="text" class="form-control" name="repassword" id="repassword"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+            <button class="btn btn-primary">Submit</button>
+            <button class="btn btn-warning">Reset</button>
+        </div>
+    </div>
+
+</form>
+<%include ../include/footer.html%>
