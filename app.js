@@ -54,6 +54,7 @@ app.use(session({
   saveUninitialized:true,// 保存未初始化的session
   store:new MongoStore({// 指定会话的数据库存储位置
     url:'mongodb://123.57.143.189:27017/jocyblog'
+    //url:'mongodb://localhost:27017/jocyblog'
   })
 }));
 
@@ -65,6 +66,11 @@ app.use(function (req,res,next) {
   res.locals.user = req.session.user;
   res.locals.success = req.flash('success').toString();
   res.locals.error = req.flash('error').toString();
+
+  // 关键字在首页顶部模板中需要用到，所以必须要在中间件中赋值
+  res.locals.keyword = '';
+  res.locals.pageNum = 1;
+  res.locals.pageSize = 2;
   next();
 });
 // 配置首页路由 父路径

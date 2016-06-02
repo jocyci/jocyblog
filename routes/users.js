@@ -51,7 +51,16 @@ router.get('/login',ware.checkNotLogin,function (req,res) {
 });
 
 router.post('/login',ware.checkNotLogin,function (req,res) {
-  res.send('post login');
+  var user =req.body;
+  model.user.findOne(user,function (err,doc) {
+    if(doc) {
+      req.session.user = doc;
+      res.redirect('/');
+    } else {
+      res.redirect('back');
+
+    }
+  })
 });
 
 
